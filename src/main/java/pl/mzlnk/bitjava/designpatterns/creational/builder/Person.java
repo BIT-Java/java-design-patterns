@@ -1,11 +1,17 @@
 package pl.mzlnk.bitjava.designpatterns.creational.builder;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 public class Person {
 
     private String name;
     private String surname;
     private int age;
     private boolean employee;
+    private int childrens;
+
 
     private Person(String name, String surname, int age, boolean employee) {
         this.name = name;
@@ -14,6 +20,7 @@ public class Person {
         this.employee = employee;
     }
 
+    @Getter
     public static class PersonBuilder {
 
         // required
